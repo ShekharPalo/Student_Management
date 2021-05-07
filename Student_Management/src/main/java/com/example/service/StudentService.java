@@ -21,6 +21,10 @@ public class StudentService implements IStudentService {
 
 		Parent parent = new Parent();
 		BeanUtils.copyProperties(spVo, parent);
+		parent.setParentName("AAA");
+		parent.setParentAddress("Hyderabad");
+		parent.setParentMobile(987654321);
+		parent.setParentAge(36);
 		parent.setstdId(student);
 		parentRepo.saveAndFlush(parent);
 
